@@ -1,0 +1,83 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-17c62f01526-79db253c75657759": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://localhost:5432/postgres",
+				"home": "postgresql-x64-13",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		},
+		"postgres-jdbc-17c62f4ccb6-25a801b4263753bc": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "covid_passport",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "covid_passport",
+				"url": "jdbc:postgresql://localhost:5432/covid_passport",
+				"home": "postgresql-x64-13",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-show-template-db@": "false",
+					"@dbeaver-show-unavailable-db@": "false",
+					"show-database-statistics": "false",
+					"@dbeaver-read-all-data-types-db@": "false",
+					"@dbeaver-use-prepared-statements-db@": "false",
+					"postgresql.dd.plain.string": "false",
+					"postgresql.dd.tag.string": "false"
+				},
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"postgres-jdbc-17c62f01526-79db253c75657759": {
+			"covid_passport": {
+				"covid_passport": {
+					"@properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"covid_passport\" time=\"202110082219\"><entities><data-source id=\"postgres-jdbc-17c62f01526-79db253c75657759\"><entity id=\"1\" name=\"pais\" fq-name=\"covid_passport.pais\" order=\"0\" x=\"307\" y=\"274\"><path name=\"covid_passport\"/><path name=\"covid_passport\"/></entity><entity id=\"2\" name=\"persona\" fq-name=\"covid_passport.persona\" order=\"1\" x=\"307\" y=\"20\"><path name=\"covid_passport\"/><path name=\"covid_passport\"/></entity><entity id=\"3\" name=\"solicitud_permiso\" fq-name=\"covid_passport.solicitud_permiso\" order=\"2\" x=\"20\" y=\"118\"><path name=\"covid_passport\"/><path name=\"covid_passport\"/></entity><entity id=\"4\" name=\"tipo_documento\" fq-name=\"covid_passport.tipo_documento\" order=\"3\" x=\"601\" y=\"89\"><path name=\"covid_passport\"/><path name=\"covid_passport\"/></entity><entity id=\"5\" name=\"vacuna\" fq-name=\"covid_passport.vacuna\" order=\"4\" x=\"601\" y=\"337\"><path name=\"covid_passport\"/><path name=\"covid_passport\"/></entity><entity id=\"6\" name=\"vacuna_aceptada\" fq-name=\"covid_passport.vacuna_aceptada\" order=\"5\" x=\"20\" y=\"326\"><path name=\"covid_passport\"/><path name=\"covid_passport\"/></entity></data-source></entities><relations><relation name=\"solicitud_permiso_pais_id_fk_fkey\" fq-name=\"covid_passport.solicitud_permiso.solicitud_permiso_pais_id_fk_fkey\" type=\"fk\" pk-ref=\"1\" fk-ref=\"3\"/><relation name=\"vacuna_aceptada_pais_id_fk_fkey\" fq-name=\"covid_passport.vacuna_aceptada.vacuna_aceptada_pais_id_fk_fkey\" type=\"fk\" pk-ref=\"1\" fk-ref=\"6\"/><relation name=\"solicitud_permiso_psn_cc_fk_fkey\" fq-name=\"covid_passport.solicitud_permiso.solicitud_permiso_psn_cc_fk_fkey\" type=\"fk\" pk-ref=\"2\" fk-ref=\"3\"/><relation name=\"persona_docum_tipo_id_fk_fkey\" fq-name=\"covid_passport.persona.persona_docum_tipo_id_fk_fkey\" type=\"fk\" pk-ref=\"4\" fk-ref=\"2\"/><relation name=\"persona_vacuna_aplicada_id_fk_fkey\" fq-name=\"covid_passport.persona.persona_vacuna_aplicada_id_fk_fkey\" type=\"fk\" pk-ref=\"5\" fk-ref=\"2\"/><relation name=\"vacuna_aceptada_vacuna_id_fk_fkey\" fq-name=\"covid_passport.vacuna_aceptada.vacuna_aceptada_vacuna_id_fk_fkey\" type=\"fk\" pk-ref=\"5\" fk-ref=\"6\"/></relations></diagram>"
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
